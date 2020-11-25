@@ -5,7 +5,7 @@ import Form from './Form';
 const App = () => (
 	<>
 		<div>
-			<h2>Articles</h2>
+			<h2>Articles 2</h2>
 			<List />
 		</div>
 		<div>

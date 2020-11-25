@@ -1,17 +1,18 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-function List({ articles }) {
+function List() {
+	const articles = useSelector((state) => state.articles);
+
 	return (
-		<ul>
-			{articles.map((el) => (
-				<li key={el.id}>{el.title}</li>
-			))}
-		</ul>
+		<>
+			<ul>
+				{articles.map((el) => (
+					<li key={el.index}>{el}</li>
+				))}
+			</ul>
+		</>
 	);
 }
 
-const mapStateToProps = (state) => {
-	return { articles: state.articles };
-};
-export default connect(mapStateToProps)(List);
+export default List;
